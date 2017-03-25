@@ -1,0 +1,43 @@
+html {
+  color: #555459;
+  font-family: 'Lato', sans-serif;
+}
+
+.page-container {
+  width: 100vw;
+}
+
+.page-wrapper {
+  padding-right: 15px;
+  margin: auto;
+  width: 500px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+b, a {
+  color: #2AB27B;
+}
+
+a:hover {
+  color: #EDB431;
+}
+
+.emoji {
+  font-size: 20px;
+}
+
+img#github {
+  display: block;
+  height: 30px;
+  margin: auto;
+  opacity: 0.5;
+  width: 30px;
+}
+
+img#github:hover {
+  opacity: 0.75;
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sized for Slack</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="../public/assets/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-wrapper">
+        <div class="headline">
+          <h1>Sized for Slack</h1>
+        </div>
+
+        <div class="welcome">
+          <p>Hi, there! <b class="emoji">&#x1F44B</b></p>
+          <p> Want to make your own custom emojis sized perfectly for Slack?</p>
+          <p>Follow the three steps below:</p>
+        </div>
+
+        <div class="step-one">
+          <h2><b>1.</b>  Upload your image file &#x1F680</h2>
+          <form method="post" enctype="multipart/form-data">
+            <label for="file" name="file" id="file">
+            <input type="file" name="nf" id="file">
+            <input type="submit" class="btn btn-lg btn-info">
+          </form>
+        </div>
+
+        <div class="step-two">
+          <h2><b>2.</b> &#x1F447 Click to download your new emoji</h2>
+          <a href="/public/pics/{{.}}" download><img src="/public/pics/{{.}}"></a>
+        </div>
+
+        <div class="step-three">
+          <h2><b>3.</b>  Head over to Slack's custom emoji <a href="http://www.slack.com/customize/emoji" target="_blank">page</a></h2>
+          <ul>
+            <li><p>Upload and name your new emoji!<p></li>
+          </ul>
+        </div>
+
+        <div class="thanks">
+          <h2>Thanks for checking out Sized for Slack &#x1F389</h2>
+        </div>
+
+        <div class="footer">
+          <a href="http://www.github.com/stacy-wells"><img id="github" src="../public/assets/images/github-logo.png"><a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script> -->
+    <!-- <script src="js/plugins.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+  </body>
+</html>
