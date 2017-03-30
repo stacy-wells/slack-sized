@@ -46,3 +46,11 @@ img#github {
 img#github:hover {
   opacity: 0.75;
 }
+
+.hidden {
+  display: none;
+}
+
+#error {
+  color: #EC2A6C;
+}

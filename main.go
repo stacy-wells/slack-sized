@@ -13,6 +13,7 @@ import (
 	"github.com/nfnt/resize"
 )
 
+var counter int
 var i photo
 var path string
 var tpl *template.Template
@@ -33,6 +34,9 @@ func main() {
 }
 
 func index(w http.ResponseWriter, req *http.Request) {
+	// delete files if necessary
+	checkCounter()
+
 	if req.Method == http.MethodPost {
 		mf, fh, err := req.FormFile("nf")
 		if err != nil {
@@ -53,14 +57,25 @@ func index(w http.ResponseWriter, req *http.Request) {
 		io.Copy(nf, mf)
 
 		transformImage(path)
+		// create struct for view
+		i = photo{
+			Name: path,
+		}
 	}
 
-	// create struct for view
-	i := photo{
-		Name: path,
-	}
-
+	increment()
 	tpl.ExecuteTemplate(w, "index.gohtml", i)
+}
+
+func checkCounter() {
+	if counter > 0 {
+		os.Remove(path)
+		i = photo{}
+	}
+}
+
+func increment() {
+	counter = counter + 1
 }
 
 func transformImage(f string) {

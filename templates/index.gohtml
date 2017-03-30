@@ -29,11 +29,15 @@
         </div>
 
         <div class="step-one">
+          <div id="error" class="hidden">
+            <p>Sorry, but Sized for Slack only supports JPEGs currently.</p>
+            <p>Support for more file types is coming soon!</p>
+          </div>
           <h2><b>1.</b>  Upload your image file &#x1F680</h2>
           <form method="post" enctype="multipart/form-data">
             <label for="file" name="file" id="file">
-            <input type="file" name="nf" id="file">
-            <input type="submit" class="btn btn-lg btn-info">
+            <input type="file" name="nf" id="fileInput" onchange="checkextension();">
+            <input type="submit">
           </form>
         </div>
 
@@ -58,14 +62,11 @@
         </div>
 
         <div class="footer">
-          <a href="http://www.github.com/stacy-wells"><img id="github" src="../public/assets/images/github-logo.png"><a>
+          <a href="https://github.com/stacy-wells/slack-sized"><img id="github" src="../public/assets/images/github-logo.png"><a>
         </div>
       </div>
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script> -->
-    <!-- <script src="js/plugins.js"></script> -->
-    <!-- <script src="js/main.js"></script> -->
+    <script src="public/assets/javascripts/main.js"></script>
   </body>
 </html>
