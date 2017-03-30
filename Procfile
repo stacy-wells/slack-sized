@@ -1,1 +1,1 @@
-web: slack-sized
+web: slack-sized -p $PORT
