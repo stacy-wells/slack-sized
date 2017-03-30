@@ -30,6 +30,11 @@ a:hover {
   font-size: 20px;
 }
 
+img#placeholder {
+  filter: grayscale(100%);
+  width: 127px;
+}
+
 img#github {
   display: block;
   height: 30px;

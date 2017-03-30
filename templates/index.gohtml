@@ -39,7 +39,11 @@
 
         <div class="step-two">
           <h2><b>2.</b> &#x1F447 Click to download your new emoji</h2>
-          <a href="/public/pics/{{.}}" download><img src="/public/pics/{{.}}"></a>
+          {{if .Name}}
+            <a href="{{.Name}}" download><img src="{{.Name}}"></a>
+          {{else}}
+            <img id="placeholder" src="../public/assets/images/thumbs-up-sign.png">
+          {{end}}
         </div>
 
         <div class="step-three">
