@@ -27,10 +27,12 @@ func init() {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+
 	http.HandleFunc("/", index)
 	http.Handle("/public/", http.StripPrefix("/public", http.FileServer(http.Dir("./public"))))
 	http.Handle("/favicon.ico", http.NotFoundHandler())
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":" + port, nil)
 }
 
 func index(w http.ResponseWriter, req *http.Request) {
