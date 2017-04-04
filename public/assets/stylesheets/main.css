@@ -4,13 +4,13 @@ html {
 }
 
 .page-container {
-  width: 100vw;
+  max-width: 100vw;
 }
 
 .page-wrapper {
-  padding-right: 15px;
+  padding: 15px;
   margin: auto;
-  width: 500px;
+  max-width: 500px;
 }
 
 h1 {
